@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html ng-app='lbsPoints'>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Monitoramento</title>
+
+
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+	<style>
+		html 					{ overflow-y:scroll; }
+		body 					{ padding-top:50px; }
+		#todo-list 				{ margin-bottom:30px; }
+	</style>
+	
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+	<script src="/OpenLayers-2.13.1/lib/OpenLayers.js"></script>
+	<script src="core.js"></script>
+
+</head>
+
+
+<body ng-controller="mainController">
+
+<div class="container">
+	
+	<div class="jumbotron text-center">
+			<h1>Número de Pontos Registrados <span class="label label-info">{{ pointss.length }}</span></h1>
+	</div>
+
+	<div id="Menu">
+				<input type="checkbox" ng-click="getPoint()"> 
+	</div>
+
+	<div class="col-sm-8 col-sm-offset-1 text-center" style="padding-bottom:20px">
+		<form class="form-inline" role="form">
+			<div class="form-group">
+				<input type="text" class="form-control input-lg text-center" placeholder="Digite a placa" ng-model="formData.text">
+			</div>
+				<button type="submit" class="btn btn-primary btn-lg" ng-click="getPoint()">Search</button>
+		</form>
+	</div>
+
+	
+ 	<div id="Map" style="height:450px"></div>
+ 	
+</div> 	
+</body>
+</html>
+

@@ -1,0 +1,6 @@
+1 - Startar o servico do banco mongod na linha de comando
+2 - conectar a linha de comando do banco mongo
+3 - trocar de base -> use mydb
+4 - startar a aplicacao com o nodejs
+
+
